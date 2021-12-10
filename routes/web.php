@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Middleware\logginStatus;
+use App\Models\Asset;
+use App\Models\AssetType;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
