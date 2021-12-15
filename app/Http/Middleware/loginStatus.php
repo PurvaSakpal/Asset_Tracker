@@ -16,6 +16,15 @@ class loginStatus
      */
     public function handle(Request $request, Closure $next)
     {
+
+        $admin=session('admin');
+
+        if(!empty($admin))
+        {
         return $next($request);
+        }
+        else{
+            return response()->json("Not allowed to access");
+        }
     }
 }
