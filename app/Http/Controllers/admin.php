@@ -37,9 +37,9 @@ class admin extends Controller
             }
         }
     }
-    public function dashboard(){
-        return view('dashboard');
-    }
+    // public function dashboard(){
+    //     return view('dashboard');
+    // }
     public function master(){
         return view('master');
     }

@@ -39,45 +39,50 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            <div class="card card-danger">
-                <div class="card-header">
-                    <h3 class="card-title">Pie Chart</h3>
+            <div class="card">
+                <div class="card-body">
+                    <!--Piechart-->
+                    <div class="card card-danger">
+                        <div class="card-header">
+                            <h3 class="card-title">Pie Chart</h3>
 
-                    <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                        <i class="fas fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-tool" data-card-widget="remove">
-                        <i class="fas fa-times"></i>
-                        </button>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <section id="piechart" style="width: 900px; height: 500px;"></section>
+                        </div>
                     </div>
+                    <!-- /.card-body -->
+
+
+                    <!-- BarChart -->
+                    <div class="card card-danger">
+                        <div class="card-header">
+                            <h3 class="card-title">Bar Chart</h3>
+
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <section id="barchart" style="width: 900px; height: 500px;"></section>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <section id="piechart" style="width: 900px; height: 500px;"></section>
-                    </div>
+                    <!-- /.card-body -->
+
                 </div>
-                <!-- /.card-body -->
-            </div>
-
-            <!-- BarChart -->
-            <div class="card card-danger">
-                <div class="card-header">
-                    <h3 class="card-title">Bar Chart</h3>
-
-                    <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                        <i class="fas fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-tool" data-card-widget="remove">
-                        <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    </div>
-                    <div class="card-body">
-                        <section id="barchart" style="width: 900px; height: 500px;"></section>
-                    </div>
-                </div>
-                <!-- /.card-body -->
             </div>
 
         </div>

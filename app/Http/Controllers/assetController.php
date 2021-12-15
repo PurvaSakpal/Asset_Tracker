@@ -44,7 +44,7 @@ class assetController extends Controller
                             $dest=public_path("/assetimages");
                             if($file->move($dest,$filename))
                                 {
-                                    $ass->save();
+                                    $asstype->image()->save($ass);
                                 }
                         endforeach;
                         return back()->with("success","Successfully inserted");
@@ -60,10 +60,16 @@ class assetController extends Controller
     }
     public function assets(){
         $assets=Asset::paginate(2);
+        //  $images=Asset::find()->image;
+        // $images=asset_image::all();
         return view('asset',['assets'=>$assets]);
     }
+    public function assetImage($id){
+        $images=Asset::find($id)->image;
+        return view('assetimages',['images'=>$images]);
+    }
     public function deleteAsset(Request $req){
-        // $assetimage=asset_image::where('aid',$req->aid)->get('image');
+        // $assetimage=asset_image::where('aid',$req->aid)->get();
         // return $assetimage;
         $asset=Asset::where('id',$req->aid)->delete();
         // foreach($assetimage as $aimg):

@@ -27,27 +27,32 @@
 <div class="wrapper mt-3 ml-3">
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <a href="{{route('add.assettype')}}" class="btn btn-danger mb-3">Add Asset Type</a>
-        <table class="table">
-            <tr>
-                <th>S.no</th>
-                <th>Asset Type</th>
-                <th>Asset Description</th>
-                <th>Action</th>
-            </tr>
-
-                @foreach ($assettype as $asset)
+        {{-- card starts --}}
+        <div class="card">
+            <div class="card-body">
+                <a href="{{route('add.assettype')}}" class="btn btn-danger mb-3">Add Asset Type</a>
+                <table class="table table-bordered table-striped">
                     <tr>
-                        <td>{{$asset->id}}</td>
-                        <td>{{$asset->type}}</td>
-                        <td>{{$asset->description}}</td>
-                        <td>
-                            <a href="/editAssetType/{{$asset->id}}" class="btn btn-success">Edit</a>
-                            <a href="javascript:void(0)" aid="{{$asset->id}}" class="btn btn-danger delete">Delete</a>
-                        </td>
+                        <th>S.no</th>
+                        <th>Asset Type</th>
+                        <th>Asset Description</th>
+                        <th>Action</th>
                     </tr>
-                @endforeach
-        </table>
+
+                        @foreach ($assettype as $asset)
+                            <tr>
+                                <td>{{$asset->id}}</td>
+                                <td>{{$asset->type}}</td>
+                                <td>{{$asset->description}}</td>
+                                <td>
+                                    <a href="/editAssetType/{{$asset->id}}" class="btn btn-success">Edit</a>
+                                    <a href="javascript:void(0)" aid="{{$asset->id}}" class="btn btn-danger delete">Delete</a>
+                                </td>
+                            </tr>
+                        @endforeach
+                </table>
+            </div>
+        </div>
         <div>
             {{$assettype->links()}}
         </div>
