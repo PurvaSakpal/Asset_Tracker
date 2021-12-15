@@ -11,8 +11,8 @@
         @if(Session::has('error'))
         <div class="alert alert-success">{{Session::get('error')}}</div>
         @endif
-        <input type="hidden" value="$asset->asset_code" value="code">
-        <input type="hidden" value="$asset->id" value="id">
+        {{-- <input type="hidden" value="$asset->asset_code" value="code"> --}}
+        <input type="hidden" value="{{$asset->id}}" name="id">
         <div class="container">
             <h1 class="text-success">Add Asset</h1>
             <div class="form-group">
@@ -42,11 +42,11 @@
                 <label for="gridRadios1" class="col-2">Is Active?</label>
                 <div class="col-sm-10">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="active" id="gridRadios1" value="1" checked="yes">
+                        <input class="form-check-input" type="radio" name="active" id="gridRadios1" value="1" {{ ($asset->is_active == '1') ? 'checked' : ' ' }}>
                         <label class="form-check-label" for="gridRadios1">Active</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="active" id="gridRadios2" value="0">
+                    <input class="form-check-input" type="radio" name="active" id="gridRadios2" value="0" {{ ($asset->is_active == '0') ? 'checked' : ' ' }}>
                     <label class="form-check-label" for="gridRadios2">Inactive</label>
                 </div>
             </div>

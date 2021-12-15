@@ -54,7 +54,7 @@ class assetTypeController extends Controller
     }
     public function deleteAssetType(Request $req){
         $asset=AssetType::where('id',$req->aid)->delete();
-        return back()->with("success","Asset Deleted!!!");
+        return back()->with("success","Asset Type Deleted!!!");
 
     }
 }

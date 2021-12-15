@@ -87,17 +87,18 @@ class assetController extends Controller
         ]);
         if($validate){
             $name=$req->name;
-            $code=$req->code;
             $id=$req->id;
             $assetid=$req->type;
             $active=$req->active;
-
+            $assetname=AssetType::where('id',$req->type)->first();
             $data=Asset::where('id',$id)->update([
                 'asset_name'=>$name,
                 'asset_type'=>$assetid,
+                'assettype_name'=>$assetname['type'],
                 'is_active'=>$active,
             ]);
             return redirect('/assets');
+            // return $active;
         }
     }
 }

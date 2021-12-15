@@ -38,6 +38,7 @@ Route::middleware([loginStatus::class])->group(function(){
     Route::get('/assets',[assetController::class,'assets'])->name('assets');
     Route::get('/assettypes',[assetTypeController::class,'assetTypes'])->name('assetTypes');
     Route::patch('/deleteAsset',[assetController::class,'deleteAsset']);
+    Route::patch('/deleteAssetType',[assetTypeController::class,'deleteAssetType']);
     Route::get('/editAsset/{id}',[assetController::class,'editAsset'])->name('editAsset');
     Route::get('/editAssetType/{id}',[assetTypeController::class,'editAssetType'])->name('editAssetType');
     Route::post('/posteditassettype',[assetTypeController::class,'postEditAssetType'])->name('post.editassettype');
