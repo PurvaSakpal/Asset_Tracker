@@ -51,7 +51,11 @@
                         <td>{{$asset->asset_name}}</td>
                         <td>{{$asset->asset_code}}</td>
                         <td>{{$asset->assettype_name}}</td>
-                        <td>{{$asset->is_active}}</td>
+                        <td>@if($asset->is_active == 1)
+                            <h3><span class="badge badge-success">Active</span></h3>
+                         @else
+                          <h3><span class="badge badge-warning">In Active</span></h3>
+                          @endif</td>
                         <td>
                             <a href="/assetimage/{{$asset->id}}" class="btn btn-warning">View</a>
                             <a href="/editAsset/{{$asset->id}}" class="btn btn-success">Edit</a>

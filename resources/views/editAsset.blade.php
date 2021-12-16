@@ -29,6 +29,7 @@
                 <div class="col-10">
                 <select name="type" id="type" class="form-control">
                     <option value="">Asset Type</option>
+                        <option value="{{$asset['asset_type']}}" selected>{{$asset['assettype_name']}}</option>
                         @foreach ($assettype as $assetty)
                            <option value="{{$assetty['id']}}">{{$assetty['type']}}</option>
                         @endforeach
