@@ -12,7 +12,7 @@
         <div class="alert alert-success">{{Session::get('error')}}</div>
         @endif
         <div class="container">
-            <h1 class="text-success">Add Asset Type</h1>
+            <h1 class="text-success">Edit Asset Type</h1>
             <input type="hidden" value="{{$asset->id}}" name="hid">
             <div class="form-group">
                 <label for="type" class="col-2">Asset Type</label>

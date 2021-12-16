@@ -45,7 +45,7 @@ class assetTypeController extends Controller
         ]);
         if($validate){
             $id=$req->hid;
-            $data=AssetType::where('id',$id)->update([
+            AssetType::where('id',$id)->update([
                 'type' => $req->type,
                 'description' => $req->description,
                 ]);
@@ -53,7 +53,7 @@ class assetTypeController extends Controller
         }
     }
     public function deleteAssetType(Request $req){
-        $asset=AssetType::where('id',$req->aid)->delete();
+            AssetType::where('id',$req->aid)->delete();
         return back()->with("success","Asset Type Deleted!!!");
 
     }
